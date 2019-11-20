@@ -1,10 +1,12 @@
-﻿@model List<ImageGallery.Models.EntityFramework.GalleryImage>
+﻿@model List<ImageGallery.Models.EntityFramework.Gallery>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-@Html.ActionLink("Upload a Photo", "Upload", new { @class = "btn-primary" })
+<h2>Index</h2>
+
+@Html.ActionLink("Upload a Photo", "CoverUpload", new { @class = "btn-primary" })
 <br />
 <hr />
 
@@ -19,13 +21,10 @@
     {
         <div class="col-lg-3 col-md-4 col-6">
 
-            <a href="~/Content/Images/@item.ImagePath" class="d-block mb-4 h-100">
-                <img class="img-fluid img-thumbnail" src="~/Content/Images/@item.ImagePath" width="400" height="300" alt="">
+            <a href="/Image/Index/@item.GalleryImages" class="d-block mb-4 h-100">
+                <img class="img-fluid img-thumbnail" src="~/Content/Images/@item.CoverPath" width="400" height="300" alt="">
             </a>
         </div>
     }
 
 </div>
-
-
-

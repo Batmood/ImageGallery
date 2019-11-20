@@ -15,8 +15,8 @@ namespace ImageGallery.Controllers
         // GET: Image
         public ActionResult Index()
         {
-            var model = db.GaleryImages.ToList();
-            return View(model);
+            var images = db.GaleryImages.ToList();
+            return View(images);
         }
         public ActionResult Upload()
         {
