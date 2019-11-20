@@ -7,7 +7,7 @@
 
 <h2>CoverUpload</h2>
 
-@using (Html.BeginForm("CoverUpload","Gallery",FormMethod.Post,new {enctype="multipart/form-data" }))
+@using (Html.BeginForm("CoverUpload", "Gallery", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
     
@@ -26,7 +26,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.CoverPath, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                <input type="file" name="CoverPath" class="form-control" />
+                <input type="file" name="CoverPath" class="form-control"/>
                 @Html.ValidationMessageFor(model => model.CoverPath, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -40,5 +40,5 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index","Gallery")
+    @Html.ActionLink("Back to List", "Index")
 </div>

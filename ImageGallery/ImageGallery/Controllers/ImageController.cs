@@ -46,5 +46,16 @@ namespace ImageGallery.Controllers
             return RedirectToAction("Index");
             
         }
+        public ActionResult Delete(int id)
+        {
+            var image = db.GaleryImages.Find(id);
+            if (image==null)
+            {
+                return HttpNotFound();
+            }
+            db.GaleryImages.Remove(image);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }

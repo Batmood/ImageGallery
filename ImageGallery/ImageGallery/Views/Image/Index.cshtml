@@ -3,29 +3,35 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-@Html.ActionLink("Upload a Photo", "Upload", new { @class = "btn-primary" })
+<h2>My Images</h2>
+@Html.ActionLink("Upload a Photo", "Upload", new { @class = "btn btn-primary" })
+<br />
+@Html.ActionLink("Back to Gallery List","Index","Gallery",new {@class="btn btn-primary" })
 <br />
 <hr />
 
-<h1 class="font-weight-light text-center text-lg-left mt-4 mb-0">Thumbnail Gallery</h1>
+<h1 class="font-weight-light text-center text-lg-left mt-4 mb-0"> My Images</h1>
 
 
-<hr class="mt-2 mb-5">
-<div class="row text-center text-lg-left">
-
-
+<div id="gallery">
     @foreach (var item in Model)
     {
-        <div class="col-lg-3 col-md-4 col-6">
+        <div class="item-container">
+            <div class="gallery-item">
+                <a href="~/Content/Images/@item.ImagePath" target="_blank">
+                    <img src="~/Content/Images/@item.ImagePath" alt="">
 
-            <a href="~/Content/Images/@item.ImagePath" class="d-block mb-4 h-100">
-                <img class="img-fluid img-thumbnail" src="~/Content/Images/@item.ImagePath" width="400" height="300" alt="">
-            </a>
+                </a>
+                <div class="description">
+                    @item.ImageName
+                </div>
+                @Html.ActionLink("Delete", "Delete", "Image", new { id = item.id }, new { @class = "btn btn=danger", onclick = "return confirm('Are you sure to delete this Image?')" })
+            </div>
         </div>
+       
     }
 
-</div>
 
+</div>
 
 

@@ -4,27 +4,34 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
-
-@Html.ActionLink("Upload a Photo", "CoverUpload", new { @class = "btn-primary" })
 <br />
+
+@Html.ActionLink("Create a Gallery", "CoverUpload", new { @class = "btn-primary" })
+<br />
+
 <hr />
 
-<h1 class="font-weight-light text-center text-lg-left mt-4 mb-0">Thumbnail Gallery</h1>
+<h1 class="font-weight-light text-center text-lg-left mt-4 mb-0">My Gallery</h1>
 
 
-<hr class="mt-2 mb-5">
-<div class="row text-center text-lg-left">
-
-
+<div id="gallery">
     @foreach (var item in Model)
     {
-        <div class="col-lg-3 col-md-4 col-6">
+        <div class="item-container">
+            <div class="gallery-item">
+                <a href="/Image/Index/">
+                    <img src="~/Content/CoverImages/@item.CoverPath" alt="">
 
-            <a href="/Image/Index/@item.GalleryImages" class="d-block mb-4 h-100">
-                <img class="img-fluid img-thumbnail" src="~/Content/Images/@item.CoverPath" width="400" height="300" alt="">
-            </a>
+                </a>
+                <div class="description">
+                    @item.CoverName
+                </div>
+                @Html.ActionLink("Delete", "Delete", "Gallery", new { id = item.id }, new { @class = "btn btn=danger", onclick = "return confirm('Are you sure to delete this Gallery?')" })
+            </div>
         </div>
+
     }
 
+
 </div>
+

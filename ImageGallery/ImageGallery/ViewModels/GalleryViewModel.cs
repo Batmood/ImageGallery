@@ -6,10 +6,9 @@ using System.Web;
 
 namespace ImageGallery.ViewModels
 {
-    public class GalleryImageViewModel
+    public class GalleryViewModel
     {
-        public IEnumerable<GalleryImage> GalleryImages { get; set; }
-        public User User { get; set; }
-        
+        public IEnumerable<Gallery> Galleries { get; set; }
+        public User Users { get; set; }
     }
 }

@@ -10,14 +10,17 @@
     <meta name="viewport" content="width=device-width" />
     <title>_Layout</title>
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/image.css" rel="stylesheet" />
 </head>
 <body>
+    @Html.Partial("_SideBar")
     <div class="container">
         @RenderBody()
     </div>
-    <script src="~/Scripts/jquery-3.0.0.min.js"></script>
+
     <script src="~/Scripts/jquery-3.0.0.slim.min.js"></script>
+    <script src="~/Scripts/popper.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
-    <script src="~/Scripts/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>

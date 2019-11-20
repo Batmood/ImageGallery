@@ -48,15 +48,14 @@ namespace ImageGallery.Controllers
             return RedirectToAction("Index");
 
         }
-
         public ActionResult Delete(int id)
         {
-            var model = db.Galleries.Find(id);
-            if (model==null)
+            var gallery = db.Galleries.Find(id);
+            if (gallery==null)
             {
                 return HttpNotFound();
             }
-            db.Galleries.Remove(model);
+            db.Galleries.Remove(gallery);
             db.SaveChanges();
 
             return RedirectToAction("Index");
