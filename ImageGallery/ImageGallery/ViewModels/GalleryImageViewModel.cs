@@ -10,6 +10,9 @@ namespace ImageGallery.ViewModels
     {
         public IEnumerable<GalleryImage> GalleryImages { get; set; }
         public User User { get; set; }
-        
+        public GalleryImageViewModel()
+        {
+
+        }
     }
 }

@@ -165,6 +165,10 @@
     <Compile Include="Migrations\201911200004165_CreatingImgGalleryDB.designer.cs">
       <DependentUpon>201911200004165_CreatingImgGalleryDB.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201911282120024_KeyInGalleryCs.cs" />
+    <Compile Include="Migrations\201911282120024_KeyInGalleryCs.designer.cs">
+      <DependentUpon>201911282120024_KeyInGalleryCs.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\EntityFramework\Gallery.cs" />
     <Compile Include="Models\EntityFramework\GalleryImage.cs" />
@@ -203,6 +207,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201911200004165_CreatingImgGalleryDB.resx">
       <DependentUpon>201911200004165_CreatingImgGalleryDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911282120024_KeyInGalleryCs.resx">
+      <DependentUpon>201911282120024_KeyInGalleryCs.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
