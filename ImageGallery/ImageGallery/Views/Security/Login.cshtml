@@ -1,0 +1,43 @@
+﻿@model ImageGallery.Models.EntityFramework.User
+    @{
+        Layout = null;
+    }
+
+    <!DOCTYPE html>
+
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Login</title>
+        <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+    </head>
+    <body>
+
+        <br /><br />
+        <div class="container">
+            @using (Html.BeginForm("Login", "Security", FormMethod.Post))
+            {
+                <div class="form-group">
+                    @Html.LabelFor(m => m.UserName)
+                    @Html.TextBoxFor(m => m.UserName, new { @class = "form-control" })
+                    <small id="emailHelp" class="form-text text-muted">Please type your username correctly</small>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(m => m.UserPassword)
+                    @Html.PasswordFor(m => m.UserPassword, new { @class = "form-control", placeholder = "password" })
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <a href="/Users/Create">Register Here</a>
+            }
+
+        </div>
+        
+
+        <script src="~/Scripts/jquery-3.0.0.slim.min.js"></script>
+        <script src="~/Scripts/popper.min.js"></script>
+        <script src="~/Scripts/bootstrap.min.js"></script>
+    </body>
+</html>

@@ -36,7 +36,7 @@ namespace ImageGallery.Controllers
             }
             return View(user);
         }
-
+        [AllowAnonymous]
         // GET: Users/Create
         public ActionResult Create()
         {
@@ -54,7 +54,7 @@ namespace ImageGallery.Controllers
             {
                 db.Users.Add(user);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Login","Security");
             }
 
             return View(user);

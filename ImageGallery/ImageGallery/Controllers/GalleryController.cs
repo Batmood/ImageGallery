@@ -12,13 +12,14 @@ namespace ImageGallery.Controllers
     public class GalleryController : Controller
     {
         ImageDbContext db = new ImageDbContext();
-        // GET: Gallery
+        
+        [AllowAnonymous]
         public ActionResult Index()
         {
             var coverImage = db.Galleries.ToList();
             return View(coverImage);
         }
-
+        
         public ActionResult CoverUpload()
         {
             ViewData["error"] = "";

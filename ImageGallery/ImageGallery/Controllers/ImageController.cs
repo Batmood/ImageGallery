@@ -13,6 +13,7 @@ namespace ImageGallery.Controllers
     {
         ImageDbContext db = new ImageDbContext();
         // GET: Image
+        [AllowAnonymous]
         public ActionResult Index()
         {
             var images = db.GaleryImages.ToList();

@@ -8,7 +8,7 @@ namespace ImageGallery.ViewModels
 {
     public class GalleryViewModel
     {
-        public IEnumerable<Gallery> Galleries { get; set; }
+        public List<Gallery> Galleries { get; set; }
         public User Users { get; set; }
     }
 }

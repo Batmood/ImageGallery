@@ -8,11 +8,8 @@ namespace ImageGallery.ViewModels
 {
     public class GalleryImageViewModel
     {
-        public IEnumerable<GalleryImage> GalleryImages { get; set; }
-        public User User { get; set; }
-        public GalleryImageViewModel()
-        {
-
-        }
+        public List<GalleryImage> GalleryImages { get; set; }
+        public User Users { get; set; }
+        
     }
 }

@@ -12,11 +12,13 @@ namespace ImageGallery.Models.EntityFramework
         {
             GalleryImages = new List<GalleryImage>();
         }
-        [Key]
-        public int id { get; set; }
+        
+        public int Id { get; set; }
+        [Display(Name ="Gallery Name")]
         public string CoverName { get; set; }
+        [Display(Name ="Gallery Path")]
         public string CoverPath { get; set; }
         public User User { get; set; }
-        public IEnumerable<GalleryImage> GalleryImages { get; set; }
+        public List<GalleryImage> GalleryImages { get; set; }
     }
 }

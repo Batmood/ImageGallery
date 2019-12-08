@@ -104,6 +104,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\image.css" />
+    <Content Include="Content\Login.css" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -157,6 +158,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\GalleryController.cs" />
     <Compile Include="Controllers\ImageController.cs" />
+    <Compile Include="Controllers\SecurityController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -168,6 +170,10 @@
     <Compile Include="Migrations\201911282120024_KeyInGalleryCs.cs" />
     <Compile Include="Migrations\201911282120024_KeyInGalleryCs.designer.cs">
       <DependentUpon>201911282120024_KeyInGalleryCs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912022139487_Database updated.cs" />
+    <Compile Include="Migrations\201912022139487_Database updated.designer.cs">
+      <DependentUpon>201912022139487_Database updated.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\EntityFramework\Gallery.cs" />
@@ -192,6 +198,7 @@
     <Content Include="Views\Gallery\CoverUpload.cshtml" />
     <Content Include="Views\Gallery\Index.cshtml" />
     <Content Include="Views\Shared\_SideBar.cshtml" />
+    <Content Include="Views\Security\Login.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -210,6 +217,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201911282120024_KeyInGalleryCs.resx">
       <DependentUpon>201911282120024_KeyInGalleryCs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912022139487_Database updated.resx">
+      <DependentUpon>201912022139487_Database updated.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
